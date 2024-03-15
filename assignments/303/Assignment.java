@@ -1,4 +1,5 @@
 package com.perscholas.java_basics;
+// PA 303.2.1 - Practice Assignment Core Java - Variables
 
 public class Assignment {
 
