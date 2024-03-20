@@ -1,7 +1,9 @@
 package pa30341;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
+
+import static java.util.Map.entry;
+
 //PA 303.4.1  - Practice Assignment
 //Control Flow (Conditional) Statements
 public class ControlFlow {
@@ -25,7 +27,7 @@ public class ControlFlow {
 
         int x = 7;
         x = 15;
-        if (x < 10){
+        if (x < 10) {
             System.out.println("Less than 10");
         }
 
@@ -133,10 +135,8 @@ public class ControlFlow {
     }
 
     private static void qSeven() {
-
-//        7. Create a program that lets the users input their filing status and income. Display how much tax the user
-//        would have to pay according to status and income.
         Scanner input = new Scanner(System.in);
+
         try {
             System.out.println("Tax Filing Estimator");
             System.out.println("Pick your filing status: (a) - single \t(b) - married, jointly \t(c) - married, " +
@@ -144,118 +144,49 @@ public class ControlFlow {
             String status = input.nextLine();
             System.out.println("Type in your current salary: ");
             int salary = input.nextInt();
+            enum FilingStatus {SINGLE, MARRIED_JOINTLY, MARRIED_SEPARATELY, HEAD}
+
+            Integer[] singleSalary = {0, 8350, 33950, 82250, 171550, 372950};
+            Integer[] marriedJointlySalary = {0, 16700, 67900, 137050, 208850, 372950};
+            Integer[] marriedSeparateSalary = {0, 8350, 33950, 68525, 104425, 186475};
+            Integer[] householdSalary = {0, 11950, 45500, 117450, 190200, 372950};
+
+            Map<FilingStatus, Integer[]> salaries = Map.ofEntries(
+                    entry(FilingStatus.SINGLE, singleSalary),
+                    entry(FilingStatus.MARRIED_JOINTLY, marriedJointlySalary),
+                    entry(FilingStatus.MARRIED_SEPARATELY, marriedSeparateSalary),
+                    entry(FilingStatus.HEAD, householdSalary)
+            );
+
             int taxRate = switch (status) {
-                case "a" -> taxSingle(salary);
-                case "b" -> taxMarriedJointly(salary);
-                case "c" -> taxMarriedSep(salary);
-                case "d" -> taxHoH(salary);
+                case "a" -> calculateTaxBracket(salaries.get(FilingStatus.SINGLE), salary);
+                case "b" -> calculateTaxBracket(salaries.get(FilingStatus.MARRIED_JOINTLY), salary);
+                case "c" -> calculateTaxBracket(salaries.get(FilingStatus.MARRIED_SEPARATELY), salary);
+                case "d" -> calculateTaxBracket(salaries.get(FilingStatus.HEAD), salary);
                 default -> 0;
             };
-            if (taxRate != 0){
+
+            if (taxRate != 0) {
                 System.out.println("Tax rate is " + taxRate + "%!");
-            }else {
+            } else {
                 System.out.println("Looks like you put in invalid input... Try again.");
             }
-        }catch(InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("Invalid input, try again!");
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
         input.close();
     }
 
-    private static int taxSingle(int salary){
-        if (salary > 372950){
-            return 35;
+    private static int calculateTaxBracket(Integer[] range, int salary) {
+        Integer[] taxRates = {10, 15, 25, 28, 33, 35};
+        for (int i = 1; i < range.length; i++) {
+            if (range[i] > salary) {
+                return taxRates[i-1];
+            }
         }
-        if (salary > 171550){
-            return 33;
-        }
-        if (salary > 82250){
-            return 28;
-        }
-        if (salary > 33950){
-            return 25;
-        }
-        if (salary > 8350){
-            return 15;
-        }
-        if (salary > 0){
-            return 10;
-        }
-
-        return 0;
-
-    }
-
-    public static int taxMarriedJointly(int salary) {
-        if (salary > 372950){
-            return 35;
-        }
-        if (salary > 208850){
-            return 33;
-        }
-        if (salary > 137050){
-            return 28;
-        }
-        if (salary > 67900){
-            return 25;
-        }
-        if (salary > 16700){
-            return 15;
-        }
-        if (salary > 0){
-            return 10;
-        }
-
-        return 0;
-
-    }
-
-    public static int taxMarriedSep(int salary){
-        if (salary > 186475){
-            return 35;
-        }
-        if (salary > 104425){
-            return 33;
-        }
-        if (salary > 68525){
-            return 28;
-        }
-        if (salary > 33950){
-            return 25;
-        }
-        if (salary > 8350){
-            return 15;
-        }
-        if (salary > 0){
-            return 10;
-        }
-
-        return 0;
-    }
-
-    public static int taxHoH(int salary){
-        if (salary > 372950){
-            return 35;
-        }
-        if (salary > 190200){
-            return 33;
-        }
-        if (salary > 117450){
-            return 28;
-        }
-        if (salary > 45500){
-            return 25;
-        }
-        if (salary > 11950){
-            return 15;
-        }
-        if (salary > 0){
-            return 10;
-        }
-
         return 0;
     }
 }
