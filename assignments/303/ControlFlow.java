@@ -187,6 +187,6 @@ public class ControlFlow {
                 return taxRates[i-1];
             }
         }
-        return 0;
+        return 35;
     }
 }
