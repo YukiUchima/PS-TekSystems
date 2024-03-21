@@ -28,9 +28,8 @@ public class Loops {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Type two integers to solve for GCD: ");
-        int num1 = input.nextInt();
-        int num2 = input.nextInt();
-        int temp;
+        int num1 = Math.abs(input.nextInt());
+        int num2 = Math.abs(input.nextInt());
 
         // method 1: =============================================================================
 //        if (num1 < num2){
@@ -46,15 +45,13 @@ public class Loops {
 //        }
 
         // method 2: =============================================================================
-        int res = num1;
         int gcd = 1;
         for(int k = 2; k <= Math.min(num1, num2); k++){
             if (num1 % k == 0 && num2 % k == 0 && gcd < k){
                 gcd = k;
             }
         }
-        res = gcd;
-        System.out.println("GCD is: " + res);
+        System.out.println("GCD is: " + gcd);
 
         input.close();
     }
