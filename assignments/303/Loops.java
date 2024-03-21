@@ -1,12 +1,19 @@
 package pa30351;
 
 import java.util.Scanner;
-//PA - 303.5.1 - Practice Assignment - Loops
 
 public class Loops {
 
     public static void main(String[] args) {
-//        1.) Create 12x12 multiplication table
+
+        createMultiTable();
+        findGCD();
+        findTuitionYear();
+
+    }
+
+    private static void createMultiTable() {
+        //        1.) Create 12x12 multiplication table
         for (int i = 1; i <= 12; i++){
             for (int j = 1; j<=12; j++){
                 int res = i * j;
@@ -14,8 +21,10 @@ public class Loops {
             }
             System.out.println();
         }
+    }
 
-//        2.) Find GCD with between two input numbers
+    private static void findGCD() {
+        //        2.) Find GCD with between two input numbers
 
         Scanner input = new Scanner(System.in);
         System.out.println("Type two integers to solve for GCD: ");
@@ -23,7 +32,7 @@ public class Loops {
         int num2 = input.nextInt();
         int temp;
 
-        // method a:
+        // method 1: =============================================================================
 //        if (num1 < num2){
 //            temp = num1;
 //            num1 = num2;
@@ -35,11 +44,11 @@ public class Loops {
 //            num2 = num1 % num2;
 //            num1 = temp;
 //        }
-        int res = num1;
 
-        // method b:
+        // method 2: =============================================================================
+        int res = num1;
         int gcd = 1;
-        for(int k = 2; k < num1 && k < num2; k++){
+        for(int k = 2; k <= Math.min(num1, num2); k++){
             if (num1 % k == 0 && num2 % k == 0 && gcd < k){
                 gcd = k;
             }
@@ -48,8 +57,10 @@ public class Loops {
         System.out.println("GCD is: " + res);
 
         input.close();
+    }
 
-//      3.) Predict year when tuition is double
+    private static void findTuitionYear() {
+        //      3.) Predict year when tuition is double
         int tuition = 10000;
         double increase = 0.07 + 1;
         int target = tuition * 2;
