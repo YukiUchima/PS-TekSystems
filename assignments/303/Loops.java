@@ -7,20 +7,30 @@ public class Loops {
     public static void main(String[] args) {
 
         createMultiTable();
-        findGCD();
-        findTuitionYear();
+//        findGCD();
+//        findTuitionYear();
 
     }
 
     private static void createMultiTable() {
         //        1.) Create 12x12 multiplication table
-        for (int i = 1; i <= 12; i++){
-            for (int j = 1; j<=12; j++){
-                int res = i * j;
-                System.out.print("\t" + res);
+        int size = 12;
+        int rowSize = 72;       //determined by outputting row size
+        String header = "Multiplication Table";
+        System.out.print(String.format("\n%" + (rowSize+header.length())/2 + "s\n" ,header));
+        System.out.println();
+        for (int i = 1; i <= size; i++){
+            String row = "";
+            for (int j = 1; j<= size; j++){
+                double res = i * j;
+                row += (String.format("%6.0f", res));
             }
-            System.out.println();
+            System.out.println(row);
         }
+        for (int space = 0; space <= rowSize; space++){
+            System.out.print("-");
+        }
+        System.out.println();
     }
 
     private static void findGCD() {
