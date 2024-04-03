@@ -3,5 +3,7 @@ projects/
 profDev/
 KBA/
 preliminaryDocs/
-.gitignore
+*.gitignore
 notes/
+*projectJava/
+

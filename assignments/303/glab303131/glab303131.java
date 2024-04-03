@@ -2,6 +2,7 @@ package glab303131;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -11,9 +12,41 @@ public class glab303131 {
 
     public static void main(String[] args) {
 //    exampleOne();
-        exampleTwo();
+    exampleOneChannel();
+//        exampleTwo();
+//        deleteFile();
+//        getWorkingDirectory();
 
+    }
 
+    private static void exampleOneChannel() {
+    }
+
+    private static void getWorkingDirectory() {
+        System.out.println("Current: " + System.getProperty("user.dir"));
+    }
+
+    private static void deleteFile() {
+        Scanner userIn = new Scanner(System.in);
+//        String path = "C://Users//admin//Documents//gitHub//PS-TekSystems//projects//PracticeAssignments" +
+//        "//src//glab303131//deleteMe.csv";
+        String path = "./PracticeAssignments/src/glab303131/here.txt";
+        File file = new File(path);
+        try{
+            if (file.createNewFile()) {
+                System.out.println("File has been Created");
+            } else {
+                System.out.println("File already exists");
+            }
+            System.out.println("File has been created... it will be deleted after you press enter");
+            userIn.nextLine();
+
+            file.deleteOnExit();
+//            file.delete();
+
+        }catch(IOException e){
+            System.out.println(e);
+        }
     }
 
     private static void exampleOne() {
