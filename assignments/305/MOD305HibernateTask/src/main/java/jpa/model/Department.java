@@ -1,41 +1,37 @@
-package model;
+package jpa.model;
+
+import javax.persistence.*;
 
 //❑ Using Hibernate, create a Department Model with the following attributes:
-// ➢ int id
+// ➢ int did
 // ➢ String name
 // ➢ String state
 //❑ Using Hibernate, create the relevant services for this Model (create, update name/state, find, and delete).
-//❑ Do not forget to add your model to the configuration file (hibernate.cfg.xml).
-
-import jakarta.persistence.*;
-
+//❑ Do not forget to add your model to the configuration file (usersdb.cfg.xml).
 
 @Entity
-@Table(name = "Department")
+@Table
 public class Department {
 
-    @Id
-//  GeneratedValue generates the primary key for column 'id'
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private String state;
 
-    public Department() {
-
-    }
-
-    public Department(String name, String state) {
+    public Department() {}
+    public Department(String name, String state){
         this.name = name;
         this.state = state;
     }
 
-    public int getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

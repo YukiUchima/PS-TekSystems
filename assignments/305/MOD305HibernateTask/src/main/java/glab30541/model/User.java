@@ -1,4 +1,4 @@
-package glab.model;
+package glab30541.model;
 import javax.persistence.*;
 
 @Entity

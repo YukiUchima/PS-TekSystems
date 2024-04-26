@@ -16,11 +16,12 @@
         <!-- MySQL DB dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <!-- print all executed SQL on console -->
-        <property name="hibernate.show_sql" >true </property>
-        <property name="hibernate.format_sql" >true </property>
+<!--        <property name="hibernate.show_sql" >true </property>-->
+<!--        <property name="hibernate.format_sql" >true </property>-->
 
         <!--   Mapping entity file -->
         <mapping class="glab.model.User"/>
+        <mapping class="glab.model.Employee"/>
 
     </session-factory>
 </hibernate-configuration>

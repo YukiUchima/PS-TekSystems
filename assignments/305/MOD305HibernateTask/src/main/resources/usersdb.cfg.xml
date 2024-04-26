@@ -2,33 +2,28 @@
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
 <hibernate-configuration>
     <session-factory>
 
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!--        Database Connection Settings -->
+<!--        Database Connection Settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/NewDepartmentExample?createDatabaseIfNotExist=true</property>
-        <property name="connection.username">admin</property>
-        <property name="connection.password">password</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/usersdb?createDatabaseIfNotExist=true</property>
+        <property name="connection.username">generaluser</property>
+        <property name="connection.password">creator</property>
 
         <!-- MySQL DB dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-<!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>-->
-<!--        Use MySQL 8 Dialect for versions 6 and earlier -->
-
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <!-- print all executed SQL on console -->
         <property name="hibernate.show_sql" >true </property>
         <property name="hibernate.format_sql" >true </property>
 
         <!--   Mapping entity file -->
-        <mapping class="model.Department"/>
-
-
-
-
+        <mapping class="jpa.model.Department"/>
+        <mapping class="jpa.model.Employee"/>
+        <mapping class="glab30541.model.User"/>
 
     </session-factory>
+
 </hibernate-configuration>

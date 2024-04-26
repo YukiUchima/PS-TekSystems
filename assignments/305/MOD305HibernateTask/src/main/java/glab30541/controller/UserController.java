@@ -1,45 +1,18 @@
-package glab.controller;
+package glab30541.controller;
 
-import glab.model.User;
+import glab30541.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.TypedQuery;
-import java.lang.reflect.Type;
 import java.util.List;
 
 public class UserController {
 
-    public static void main(String[] args) {
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
 
-        try {
-            // Perform CRUD operations
-//            System.out.println("TEST");
-//              addUser(session);  // Uncomment to add users
-//            findUser(session, 2); // Replace '3' with the actual user ID you want to find
-//            updateUser(session, 3); // Replace '3' with the actual user ID you want to update
-//            deleteUser(session, 4); // Replace '4' with the actual user ID you want to delete
-//            findUserHql(session);
-//            getRecordById(session);
-//            getRecords(session);
-//            getMaxSalary(session);
-//            getRecordCount(session);
-//            getmaxSalaryGroupBy(session);
-            namedQueryExample(session);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            session.close();
-            factory.close();
-        }
-    }
-
-    static void namedQueryExample(Session session) {
+    public static void namedQueryExample(Session session) {
         String hql = "FROM User u WHERE u.id = :pickAnId";
         TypedQuery<User> query = session.createQuery(hql, User.class);
         query.setParameter("pickAnId", 2);
@@ -51,7 +24,7 @@ public class UserController {
         }
     }
 
-    static void getmaxSalaryGroupBy(Session session)
+    public static void getmaxSalaryGroupBy(Session session)
     {
         String hql = "SELECT SUM(U.salary), U.city FROM User U GROUP BY U.city";
         TypedQuery query = session.createQuery(hql);

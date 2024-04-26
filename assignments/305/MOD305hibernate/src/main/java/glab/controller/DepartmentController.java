@@ -1,4 +1,4 @@
-package controller;
+package glab.controller;
 
 import model.Department;
 import org.hibernate.Session;
@@ -6,8 +6,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-
 import java.util.Scanner;
+
 
 //❑ Using Hibernate, create the relevant services for this Model (create, update name/state, find, and delete).
 public class DepartmentController {
@@ -32,12 +32,12 @@ public class DepartmentController {
 
     }
 
-    public static void addDept(Session session){
+    public static void addDept(Session session) {
         Transaction transaction = session.beginTransaction();
         try {
-            Department dept1 = new Department("Transportation","Arizona");
-            Department dept2 = new Department("Education","California");
-            Department dept3 = new Department("Game and Fish","Colorado");
+            Department dept1 = new Department("Transportation", "Arizona");
+            Department dept2 = new Department("Education", "California");
+            Department dept3 = new Department("Game and Fish", "Colorado");
 //
             session.persist(dept1);
             session.persist(dept2);
@@ -51,7 +51,8 @@ public class DepartmentController {
             System.out.println(e.getMessage());
         }
     }
-    public static void updateDept(Session session, Scanner userIn, int deptId){
+
+    public static void updateDept(Session session, Scanner userIn, int deptId) {
         Transaction transaction = session.beginTransaction();
         try {
             Department dept = session.get(Department.class, deptId);
@@ -69,11 +70,12 @@ public class DepartmentController {
             }
             transaction.commit();
         } catch (Exception e) {
-            if (transaction!=null) transaction.rollback();
+            if (transaction != null) transaction.rollback();
             System.out.printf("Update failed - %s", e.getMessage());
         }
     }
-    public static void findDept(Session session, int deptId){
+
+    public static void findDept(Session session, int deptId) {
         Transaction transaction = session.beginTransaction();
         try {
             Department dept = session.get(Department.class, deptId);
@@ -83,11 +85,12 @@ public class DepartmentController {
                 System.out.printf("No dept with %d was found. \n", deptId);
             }
         } catch (Exception e) {
-            if (transaction!=null) transaction.rollback();
+            if (transaction != null) transaction.rollback();
             e.printStackTrace();
         }
     }
-    public static void deleteDept(Session session, int deptId){
+
+    public static void deleteDept(Session session, int deptId) {
         Transaction transaction = session.beginTransaction();
         try {
             Department dept = session.get(Department.class, deptId);
@@ -101,7 +104,8 @@ public class DepartmentController {
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
-            }e.printStackTrace();
+            }
+            e.printStackTrace();
         }
     }
 
