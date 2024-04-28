@@ -1,6 +1,7 @@
 package glab30551.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -14,9 +15,8 @@ public class Teacher {
     private String salary;
     private String TeacherName;
 
-//    @ManyToOne
-//    private Department department;
-
+    @ManyToOne(targetEntity = Department.class, cascade = {CascadeType.ALL})
+    private Department department;
     public Teacher() {
 
     }

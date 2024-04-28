@@ -23,6 +23,10 @@
         <mapping class="jpa.model.Department"/>
         <mapping class="jpa.model.Employee"/>
         <mapping class="glab30541.model.User"/>
+        <mapping class="bookrelationshipdemo.model.Publisher"/>
+        <mapping class="bookrelationshipdemo.model.Author"/>
+        <mapping class="bookrelationshipdemo.model.Book"/>
+        <mapping class="bookrelationshipdemo.model.Biography"/>
 
     </session-factory>
 

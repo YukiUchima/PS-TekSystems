@@ -36,7 +36,7 @@ public class UserController {
 
 
 
-    static void getRecordCount(Session session) {
+    public static void getRecordCount(Session session) {
         String hql = "SELECT COUNT(*) FROM User U";
         TypedQuery<Object> query = session.createQuery(hql, Object.class);
         Object results = query.getSingleResult();
@@ -63,7 +63,7 @@ public class UserController {
     }
 
 
-    static void getRecordById(Session session) {
+    public static void getRecordById(Session session) {
         String hql = "FROM User u WHERE u.id > 2 ORDER BY u.salary DESC";
         TypedQuery<User> query = session.createQuery(hql, User.class);
         List<User> results = query.getResultList();
@@ -73,7 +73,7 @@ public class UserController {
         }
 
     }
-    static void findUserHql(Session session) {
+    public static void findUserHql(Session session) {
         String hqlFrom = "FROM User";
         String hqlSelect = "SELECT u From User u";
 

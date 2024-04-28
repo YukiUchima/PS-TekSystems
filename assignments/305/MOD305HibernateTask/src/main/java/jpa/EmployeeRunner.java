@@ -12,7 +12,7 @@ public class EmployeeRunner {
         SessionFactory factory = new Configuration().configure("usersdb.cfg.xml").buildSessionFactory();
         Session session = factory.openSession();
         try{
-//            createEmployeeTable(session);
+            createEmployeeTable(session);
 //            findEmployeeByName(session, "Jenny Ji");
 //            findEmployeeById(session, 5);
             showOfficeCodes_AsDepartment(session);
@@ -20,5 +20,6 @@ public class EmployeeRunner {
             session.close();
             factory.close();
         }
+
     }
 }

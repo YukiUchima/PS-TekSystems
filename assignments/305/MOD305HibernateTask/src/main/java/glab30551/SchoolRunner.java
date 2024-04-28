@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 
+//Guided LAB 305.5.1B - Demonstration to ManyToOne and OneToMany Relationships and Mapping with IntelliJ Ultimate
 public class SchoolRunner {
 
     public static void main(String[] args) {
