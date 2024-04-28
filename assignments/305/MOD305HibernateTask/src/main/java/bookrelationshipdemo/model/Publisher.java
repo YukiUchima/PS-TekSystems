@@ -23,7 +23,7 @@ public class Publisher {
     @NonNull
     private String name;
 
-    @ManyToMany     // PUBLISHER - to - BOOK: Many publishers print many books
+    @ManyToMany(fetch = FetchType.LAZY)     // PUBLISHER - to - BOOK: Many publishers print many books
     @JoinTable(name = "book_publisher", joinColumns = @JoinColumn(name = "pub_id"), inverseJoinColumns =
     @JoinColumn(name = "bo_id"))
     private List<Book> books = new ArrayList<>();

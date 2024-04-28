@@ -9,20 +9,20 @@
 
         <!--        Database Connection Settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/demoDB?createDatabaseIfNotExist=true</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/flightdb?createDatabaseIfNotExist=true</property>
         <property name="connection.username">root</property>
         <property name="connection.password">admin</property>
 
         <!-- MySQL DB dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <!-- print all executed SQL on console -->
-<!--        <property name="hibernate.show_sql" >true </property>-->
-<!--        <property name="hibernate.format_sql" >true </property>-->
+        <property name="hibernate.show_sql" >true </property>
+        <property name="hibernate.format_sql" >true </property>
 
         <!--   Mapping entity file -->
-        <mapping class="reviewsession0427.model.Author"/>
-        <mapping class="reviewsession0427.model.Book"/>
-        <mapping class="reviewsession0427.model.Store"/>
+        <mapping class="reviewSession0428.model.Airline"/>
+        <mapping class="reviewSession0428.model.Flight"/>
+        <mapping class="reviewSession0428.model.Passenger"/>
 
     </session-factory>
 

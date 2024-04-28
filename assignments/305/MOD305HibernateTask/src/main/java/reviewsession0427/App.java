@@ -1,16 +1,12 @@
-package relationshipsReviewSession;
-
-import static relationshipsReviewSession.controller.BookController.getAllBooks;
-import static relationshipsReviewSession.controller.BookController.getBookById;
-import static relationshipsReviewSession.controller.StoreController.getAllStores;
+package reviewsession0427;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import relationshipsReviewSession.model.Author;
-import relationshipsReviewSession.model.Book;
-import relationshipsReviewSession.model.Store;
+import reviewsession0427.model.Author;
+import reviewsession0427.model.Book;
+import reviewsession0427.model.Store;
 
 import java.util.List;
 

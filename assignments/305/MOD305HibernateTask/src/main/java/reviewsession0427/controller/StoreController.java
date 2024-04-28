@@ -1,7 +1,7 @@
-package relationshipsReviewSession.controller;
+package reviewsession0427.controller;
 
 import org.hibernate.Session;
-import relationshipsReviewSession.model.Store;
+import reviewsession0427.model.Store;
 
 import javax.persistence.TypedQuery;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package relationshipsReviewSession.model;
+package reviewsession0427.model;
 
 import lombok.*;
 
