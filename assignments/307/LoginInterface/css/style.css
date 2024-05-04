@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(221, 221, 221);
+}
+
+.center {
+  font-weight: 600;
+  border-radius: 8px;
+  color: rgb(70, 70, 70);
+  margin: auto;
+  text-align: center;
+  width: 40%;
+  background-color: rgb(167, 167, 167);
+  box-shadow: 10px 10px 30px rgb(99, 130, 130);
+}
+
+#logo {
+  position: relative;
+  width: 16%;
+  top: -20px;
+}
+form {
+  height: 500px;
+}
+form input {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 3px;
+  height: 60px;
+  width: 80%;
+  text-align: center;
+}
+
+form a {
+  color: rgb(82, 82, 82);
+  text-decoration: none;
+}
+
+form p a {
+  font-size: 30px;
+  color: rgb(130, 122, 12);
+}
+
+form p {
+  margin: 40px 0;
+  font-size: 1.4rem;
+}
+
+form button {
+  background-color: rgb(42, 207, 207);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+}
+
+form button:hover {
+  color: rgb(229, 226, 255);
+  background-color: #555da4;
+  font-size: 1.6rem;
+  transition: 0.6s;
+}
+
+section {
+  margin: 20px;
+}
+
+form .bottom {
+  position: relative;
+  bottom: -80px;
+}
+
+a:hover {
+  color: rgb(68, 75, 12);
+  transition: ease-in-out 0.6s;
+}
