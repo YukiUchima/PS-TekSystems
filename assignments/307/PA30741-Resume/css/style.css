@@ -1,0 +1,118 @@
+body {
+  background-color: rgb(23, 23, 23);
+  padding: 40px 80px;
+  margin: none;
+  color: rgb(95, 95, 95);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* NAVBAR ICONS */
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px;
+}
+.nav-icons {
+  display: flex;
+  height: 100%;
+}
+
+.nav-icons img {
+  display: flex;
+  filter: invert();
+  opacity: 50%;
+  width: 40px;
+  margin-left: 40px;
+}
+
+/* PROFILE SECTION */
+
+.main {
+  background-color: rgb(31, 31, 31);
+  padding: 40px;
+}
+
+.profile-upper {
+  display: flex;
+}
+
+.td-right-align {
+  text-align: right;
+}
+
+.profile-lower {
+  margin-top: 10px;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  width: 100%;
+}
+
+.profile-left img {
+  width: 20%;
+  opacity: 90%;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.profile-left p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+p {
+  margin-bottom: none;
+}
+
+h4 {
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.profile-right {
+  margin: 40px 20px;
+  flex: 1;
+}
+
+#biography {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+#biography p {
+  margin-bottom: 40px;
+}
+
+/* MAIN HISTORY */
+
+.main-history-container {
+  display: flex;
+}
+
+.employment {
+  display: flex;
+  flex-direction: column;
+}
+
+.employment-history-container {
+  display: flex;
+}
+
+.employment-title {
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  color: rgb(163, 163, 163);
+  height: 40px;
+}
+
+.main-history-left img {
+  background: rgb(11, 18, 42);
+  height: 100%;
+}
