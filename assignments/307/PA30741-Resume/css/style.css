@@ -149,7 +149,7 @@ h5 {
   border-radius: 4px;
   display: flex;
   height: 40px;
-  margin: 40px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .employer {
@@ -166,7 +166,6 @@ h5 {
   display: flex;
   align-items: center;
   height: 30px;
-  /* background-color: aliceblue; */
 }
 
 .position-title {
@@ -184,7 +183,6 @@ h5 {
 }
 
 .date {
-  height: 100%;
   width: 100%;
   text-align: right;
 }
@@ -198,8 +196,13 @@ h5 {
 
 /* ******************** ASIDE SKILLS Section ******************** */
 
+.programming h2 {
+  margin: 0;
+}
+
 .skills {
-  margin-top: 12px;
+  margin-top: 0;
+  width: 100%;
 }
 
 .skills-right {
@@ -318,4 +321,143 @@ h5 {
 .dot-fill.empty {
   background-color: #000000;
   border: 1px solid rgb(95, 95, 95);
+}
+
+/* vvvvvvvvvvvvvvvvvvvvvvv MEDIA QUERIES vvvvvvvvvvvvvvvvvvvvvvv*/
+@media screen and (max-width: 1100px) {
+  body {
+    background-color: none;
+    padding: 30px 20px;
+  }
+
+  /* Main History Section */
+  .employment-header > * {
+    font-size: 1.1rem;
+  }
+
+  .employer-title > * {
+    font-size: 0.8rem;
+  }
+
+  .employer-title-row {
+    height: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: none;
+    padding: 20px 0px;
+  }
+
+  #biography p {
+    font-size: 0.9rem;
+  }
+
+  .graphics li {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    background-color: rgb(18, 52, 109);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  /* Main History Section */
+
+  .employment-header {
+    margin-top: 0;
+  }
+
+  /* SKILLS SECTION */
+
+  .skills {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .skills-right {
+    padding-right: 10px;
+  }
+
+  .skills-right > * {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-icons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-icons a {
+    justify-content: space-between;
+  }
+
+  .nav-icons img {
+    margin: 20px;
+  }
+
+  /* PROFILE SECTION */
+
+  .profile-upper {
+    flex-direction: column;
+  }
+
+  .profile-upper img {
+    display: none;
+  }
+
+  /* Main History Section */
+  .main-history-container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .main-history-left {
+    margin: 0;
+  }
+
+  .employment-container {
+    width: 100%;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  /* SKILLS SECTION */
+
+  .skills {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .skills-right {
+    margin-top: 20px;
+  }
+
+  .skills-right h3 {
+    font-size: 0.9rem;
+  }
+
+  .graphics ul li p {
+    font-size: 1rem;
+  }
+
+  .languages p {
+    font-size: 1.3rem;
+  }
+
+  .dot-fill {
+    height: 15px;
+    width: 15px;
+  }
 }
