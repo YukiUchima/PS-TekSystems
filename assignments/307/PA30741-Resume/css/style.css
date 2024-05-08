@@ -458,11 +458,6 @@ h5 {
     font-size: 0.9rem;
   }
 
-  /* .skill-bars {
-    display: flex;
-    align-items: center;
-  } */
-
   .graphics ul li p {
     font-size: 1rem;
   }
@@ -480,5 +475,19 @@ h5 {
     height: 20px;
     width: 20px;
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* SKILLS SECTION */
+
+  .language-list-container p {
+    font-size: 0.8rem;
+  }
+
+  .dot-fill {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
   }
 }
