@@ -1,0 +1,190 @@
+:root {
+  --base-color: #171717;
+  --secondary-color: #7878ff;
+  --action-color: #4144ff;
+  --layover-color: #d2e1f36c;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin-top: 10rem;
+  height: 125vh;
+  background-size: cover;
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  background-color: rgb(58, 58, 58, 0.8);
+  color: white;
+}
+
+footer {
+  /* background-color: #f1f1f1; */
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: -500px;
+}
+
+/* footer p {
+  Need to fix it the positon of footer
+  margin: 0;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 600px));
+  gap: 4rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(79, 79, 79, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px 6px rgba(182, 249, 255, 0.868);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px 5px var(--secondary-color);
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.zoomed-image-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 300px; /* Set width according to your preference */
+}
+
+.navbar {
+  height: 40px;
+  color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(211, 211, 211, 1) 0%,
+    rgba(211, 211, 211, 0.5) 50%,
+    rgba(211, 211, 211, 0) 100%
+  );
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 2em;
+}
+
+ul li {
+  background-color: rgb(49, 135, 255, 0.5);
+  border-radius: 8px;
+  align-items: center;
+  height: 28px;
+  text-align: center;
+}
+
+a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: inherit;
+  transition: 0.4s ease, text-shadow 0.4s ease-in-out;
+  margin: 4px 40px;
+}
+
+a:hover {
+  color: #0f0e0e;
+  text-shadow: 0 0 5px #326a86, 0 0 10px #19577a, 0 0 15px #2bd5ff,
+    0 0 20px #206988, 0 0 35px #1bc2ff, 0 0 40px #2128f3;
+}
+
+/* Add media query for responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 300px; /* Set width according to your preference */
+}
+
+.zoomed-image-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 300px; /* Set width according to your preference */
+}
+
+.original-image:hover + .zoomed-image-container {
+  display: block;
+}
+
+.zoomed-image {
+  width: 150%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 300px; /* Adjust the container size as needed */
+  height: 200px; /* Adjust the container size as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.2); /*Adjust the scale factor for zoom level*/
+}
+
+img {
+  width: 350%;
+  height: 350%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .image-container:hover img {
+  transform: scale(1.2); /* Adjust the scale factor for zoom level */
+.single-card-view {
+  grid-template-columns: 1fr;
+}
