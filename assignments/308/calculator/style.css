@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator-container {
+  background-color: antiquewhite;
+}
+
+#output-screen {
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr 1fr);
+}
+
+.grid-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-operators {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+textarea {
+  text-align: right;
+  font-size: 1.2rem;
+}
