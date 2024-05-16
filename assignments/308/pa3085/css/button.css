@@ -1,0 +1,12 @@
+/* 
+    A width of 96px.
+    A height of 48px.
+    The font-size attribute is 24px.
+*/
+
+#btn {
+  font-size: 24px;
+  width: 96px;
+  height: 48px;
+  background-image: linear-gradient(grey, white);
+}

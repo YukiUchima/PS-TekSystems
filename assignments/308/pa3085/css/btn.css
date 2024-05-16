@@ -1,0 +1,16 @@
+body {
+  background-color: antiquewhite;
+}
+
+.grid-container {
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+button {
+  font-size: 24px;
+  height: 48px;
+  width: 75%;
+}
