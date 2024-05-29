@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My-Profile</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="page-links">
+          <a href="landingPage.html">
+            <img
+              id="logo"
+              src="../images/profile/icons8-circle-96.png"
+              alt="logo"
+            />
+          </a>
+
+          <ul>
+            <li class="poppins-bold">
+              <a href="landingPage.html">Back To Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Profile Body -->
+    <div class="profile-container">
+      <section class="profile-grid-container">
+        <aside class="profile-aside-left">
+          <img src="" alt="user avatar" />
+          <button id="profile-edit-button" class="poppins-regular">
+            Edit Profile
+          </button>
+          <div class="profile-info">
+            <div class="last-visit">
+              <h3 class="poppins-bold">Last Visit</h3>
+              <p class="poppins-regular">3 Minutes Ago</p>
+            </div>
+            <div class="place">
+              <h3 class="poppins-bold">Place</h3>
+              <p class="poppins-regular">United States</p>
+            </div>
+          </div>
+          <button id="profile-logout-button" class="poppins-regular logout-btn">
+            Log Out
+          </button>
+        </aside>
+
+        <!-- Profile deatils  -->
+        <div class="profile-details">
+          <h2 class="poppins-bold">Settings</h2>
+          <form action="" class="profile-form-grid">
+            <div class="input-container">
+              <label for="username" class="poppins-regular">User Name</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Nora"
+                readonly
+              />
+            </div>
+            <div class="input-container">
+              <label for="date" class="poppins-regular">Joined Date</label>
+              <input
+                type="date"
+                id="date"
+                name="joinDate"
+                value="2018-07-22"
+                readonly
+              />
+            </div>
+            <div class="input-container">
+              <label for="language" class="poppins-regular">Language</label>
+              <select name="language" id="language" class="poppins-regular">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option
+                  selected="selected"
+                  value="japanese"
+                  class="poppins-regular"
+                >
+                  Japanese
+                </option>
+              </select>
+            </div>
+            <div class="input-container">
+              <label for="region" class="poppins-regular">Region</label>
+              <select name="region" id="region">
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option selected="selected" value="North America">
+                  North America
+                </option>
+                <option value="Latin America">Latin America</option>
+                <option value="Africa">Africa</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="profile-details-footer">
+            <button id="profile-deactivate-button" class="poppins-bold">
+              Deactivate Account
+            </button>
+            <button id="profile-save-button" class="poppins-bold">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="../scripts/profile.js"></script>
+  </body>
+</html>

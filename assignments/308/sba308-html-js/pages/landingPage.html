@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue-font: #29a19c;
+        --secondary-color: #393e46;
+      }
+    </style>
+    <title>Main Page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="page-links">
+          <img id="logo" src="../images/logo.png" alt="logo" />
+          <ul>
+            <li class="poppins-bold"><a href="landingPage.html">home</a></li>
+            <li class="poppins-bold">
+              <a href="./encyclopedia.html">Encyclopedia</a>
+            </li>
+          </ul>
+        </div>
+        <div class="login profile-dropdown" id="user-signed-out">
+          <button class="profile-button poppins-bold">
+            <a href="#">Members</a>
+          </button>
+          <div class="login profile-content">
+            <button id="form-login-button" class="poppins-bold">> login</button>
+            <button
+              id="form-register-button"
+              class="poppins-bold"
+              type="submit"
+            >
+              > register
+            </button>
+          </div>
+        </div>
+        <div class="login profile-dropdown hidden" id="user-signed-in">
+          <button class="profile-button poppins-bold">
+            <a href="#">my account</a>
+          </button>
+          <div class="login profile-content">
+            <button id="form-login-button" class="poppins-bold">
+              <a href="./profile.html">> profile</a>
+            </button>
+            <button class="poppins-bold logout-btn">> logout</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- TODO -->
+    <section id="section-main">
+      <div class="mission poppins-regular">
+        <h1>Welcome, Dedicated Care Planters</h1>
+        <h3>Your One Stop Shop for all your needs!</h3>
+
+        <p>
+          All of your organic, green friends will thrive. We have all of your
+          needs covered and an encyclopedia library of members' plants.
+        </p>
+
+        <p>Sign Up FREE Today!</p>
+        <p>
+          Becoming a member allows you to be part of this wonderful community
+          with access 24/7 to forums and discussions!
+        </p>
+      </div>
+      <div class="testimonials-container">
+        <h2 class="poppins-semibold-italic testimonial-title">
+          Member Testimonials
+        </h2>
+        <div class="card-container">
+          <div class="review-card">
+            <div class="user-info-card-container">
+              <img
+                src="../images/users/pexels-cottonbro-9724436.jpg"
+                alt="user photo"
+              />
+              <table>
+                <tbody>
+                  <tr>
+                    <th class="poppins-bold">Region:</th>
+                    <td class="poppins-light-italic">United Kingdom</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Favorite Plants:</th>
+                    <td class="poppins-light-italic">Hawaiian Ti Plant</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Member Since:</th>
+                    <td class="poppins-light-italic">11/03/2015</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <p class="poppins-light-italic">
+                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate, quis cumque eum magnam fuga maxime debitis
+                blanditiis quasi aliquam, perspiciatis id obcaecati deserunt."
+              </p>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="user-info-card-container">
+              <img
+                src="../images/users/pexels-sebastian-214574.jpg"
+                alt="user photo"
+              />
+              <table>
+                <tbody>
+                  <tr>
+                    <th class="poppins-bold">Region:</th>
+                    <td class="poppins-light-italic">Pacific Northwest</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Favorite Plants:</th>
+                    <td class="poppins-light-italic">Elephant Ears</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Member Since:</th>
+                    <td class="poppins-light-italic">03/22/2020</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <p class="poppins-light-italic">
+                "Cupiditate, quis cumque eum magnam fuga maxime debitis
+                blanditiis quasi dolore qui magni quod quisquam odit ad
+                architecto necessitatibus non ipsum ratione aliquam,
+                perspiciatis id obcaecati deserunt."
+              </p>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="user-info-card-container">
+              <img
+                src="../images/users/pexels-roman-odintsov-4555613.jpg"
+                alt="user photo"
+              />
+              <table>
+                <tbody>
+                  <tr>
+                    <th class="poppins-bold">Region:</th>
+                    <td class="poppins-light-italic">Northeast</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Favorite Plants:</th>
+                    <td class="poppins-light-italic">Cordyline</td>
+                  </tr>
+                  <tr>
+                    <th class="poppins-bold">Member Since:</th>
+                    <td class="poppins-light-italic">05/19/2009</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <p class="poppins-light-italic">
+                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate, quis cumque eum magnam fuga maxime debitis
+                blanditiis quasi dolore qui magni quod quisquam odit ad
+                architecto deserunt."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************************************* FOOTER -->
+    <footer>
+      <div class="footer-info-flex-container">
+        <div class="footer-info">
+          <h3 class="poppins-bold">Sponsors</h3>
+          <p class="poppins-regular">Nick's Sports and Goods</p>
+          <p class="poppins-regular">WallyMart</p>
+          <p class="poppins-regular">America's Best Plant Store</p>
+        </div>
+        <div class="footer-info">
+          <h3 class="poppins-bold">News & Info</h3>
+          <p class="poppins-regular">Times - Plants For Life</p>
+          <p class="poppins-regular">The Spruce</p>
+          <p class="poppins-regular">Desert Botanical Garden</p>
+          <p class="poppins-regular">CNN</p>
+          <p class="poppins-regular">Endless Summer News</p>
+        </div>
+        <div class="footer-info">
+          <h3 class="poppins-bold">Other Sites</h3>
+          <p class="poppins-regular">Plants.com</p>
+          <p class="poppins-regular">PacificNorthWestGardens.com</p>
+          <p class="poppins-regular">GreenThumb.org</p>
+          <p class="poppins-regular">HealthyLiving.org</p>
+        </div>
+      </div>
+    </footer>
+    <div class="foot-end-container">
+      <p class="poppins-regular">&copy; 2024 Created by: Yuki U</p>
+      <div class="footer-gif-container">
+        <img src="../images/footer/icons8-youtube.gif" alt="" />
+        <img src="../images/footer/icons8-twitter.gif" alt="" />
+        <img src="../images/footer/icons8-facebook-48.png" alt="" />
+        <img src="../images/footer/icons8-instagram.gif" alt="" />
+        <img src="../images/footer/icons8-snapchat.gif" alt="" />
+      </div>
+    </div>
+
+    <!-- ******************************************* HIDDEN MODAL FORMS -->
+    <section id="user-login-form" class="user-form hidden">
+      <form class="form-submit">
+        <button class="cancel-form" type="submit">&times;</button>
+        <img
+          id="user-icon"
+          src="../images/login/UserCircle.svg"
+          alt="user icon"
+        />
+        <div id="invalid-message" class="poppins-regular hide">
+          Invalid credentials
+        </div>
+        <p class="poppins-bold">User</p>
+        <input
+          class="poppins-semibold-italic"
+          id="loginUsername"
+          name="username"
+          type="text"
+          minlength="4"
+          placeholder="Username"
+          required
+        />
+        <input
+          class="poppins-semibold-italic"
+          id="loginPassword"
+          name="password"
+          type="password"
+          placeholder="Password"
+          minlength="8"
+          required
+        />
+        <button
+          class="poppins-bold"
+          class="loginBtn"
+          id="login-submit-button"
+          type="submit"
+        >
+          Login
+        </button>
+        <button style="color: var(--blue-font)" class="loginBtn" id="facebook">
+          <img
+            src="../images/login/icons8-facebook.svg"
+            alt="facebook icon"
+          />acebook
+        </button>
+        <button style="color: var(--blue-font)" class="loginBtn" id="google">
+          <img
+            src="../images/login/icons8-google.svg"
+            alt="facebook icon"
+          />oogle
+        </button>
+        <div class="loginIssue">
+          <a href="#" class="poppins-regular">Forgot Password?</a>
+        </div>
+      </form>
+    </section>
+
+    <section id="registration-form" class="user-form hidden">
+      <form class="form-submit">
+        <button class="cancel-form" type="submit">&times;</button>
+        <img
+          id="user-icon"
+          src="../images/login/icons8-register-64.png"
+          alt="user icon"
+        />
+        <p class="poppins-bold">Sign Up</p>
+        <input
+          class="poppins-semibold-italic"
+          name="username"
+          id="registerUsername"
+          type="text"
+          placeholder="Username"
+          minlength="4"
+          required
+        />
+        <div class="error poppins-regular hide" id="reg-username">
+          Invalid username
+        </div>
+        <input
+          class="poppins-semibold-italic"
+          name="password"
+          id="registerPassword"
+          type="password"
+          placeholder="Password"
+          minlength="8"
+          required
+        />
+        <div class="error poppins-regular hide" id="reg-password">
+          Invalid Password
+        </div>
+        <input
+          class="poppins-semibold-italic"
+          name="password"
+          id="registerPassword2"
+          type="password"
+          placeholder="Confirm Password"
+          minlength="8"
+          required
+        />
+        <div class="error poppins-regular hide" id="reg-match-password">
+          Passwords do not match
+        </div>
+        <input
+          class="poppins-semibold-italic"
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+        />
+        <div class="error poppins-regular hide" id="reg-email">
+          Invalid Email
+        </div>
+        <button
+          style="color: white; background-color: var(--blue-font)"
+          class="loginBtn poppins-regular-italic"
+          id="form-register-button"
+          type="submit"
+        >
+          Create Account
+        </button>
+      </form>
+    </section>
+
+    <!-- ******************************************* Script Files -->
+    <script type="module" src="../scripts/show-forms.js"></script>
+    <script type="module" src="../scripts/login-verification.js"></script>
+    <script
+      type="module"
+      src="../scripts/registration-verification.js"
+    ></script>
+  </body>
+</html>
