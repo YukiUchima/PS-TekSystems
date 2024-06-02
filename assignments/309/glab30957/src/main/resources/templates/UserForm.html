@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Form</title>
+</head>
+<body>
+<p th:text="${FormVar.id}" ></p>
+<p th:text="${FormVar.name}" ></p>
+<p th:text="${FormVar.email}" ></p>
+
+<form th:action="@{/Getuser}" method="post">
+    <input type="number" name="id" placeholder= "Enter UserID e.g 12"    />
+    <input type="text" name="name" placeholder = "Enter Name"      />
+    <input type="email" name="email" placeholder = "Enter email" />
+    <input type="submit" name="Submit" />
+</form>
+
+</body>
+</html>

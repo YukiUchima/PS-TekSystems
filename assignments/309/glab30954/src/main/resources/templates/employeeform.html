@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee FORM</title>
+</head>
+<body>
+<h3>Welcome, Enter Employee Details</h3>
+<form th:action="@{/addEmployee}" method="post">
+    <table>
+        <tr>
+            <td><label path="id">Id</label></td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+        <td><label path="name">Enter Name</label></td>
+        <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td><label path="contactNumber">Contact Number</label></td>
+            <td><input type="text" name="contactNumber"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
